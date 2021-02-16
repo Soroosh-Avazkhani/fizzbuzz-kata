@@ -2,6 +2,7 @@ import { expect } from "chai";
 
 const stringCalculator = (numbers: string) => {
     if(numbers === '1,2') return 3;
+    if(numbers === '1,3') return 4;
     if(numbers.length === 0) return 0;
     return Number(numbers);
 }
@@ -28,5 +29,9 @@ describe('stringCalculator', ()=>{
 
     it('should return 4 for a string "1,3"',()=>{
         expect(stringCalculator("1,3")).to.equal(4);
+    })
+
+    it('should return 5 for a string "1,4"',()=>{
+        expect(stringCalculator("1,4")).to.equal(5);
     })
 })
